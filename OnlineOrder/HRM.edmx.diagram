@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1ceb08602104ef6ae8b9729176eebc7" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineOrdersModel.Advertisement" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Banner" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Blog" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Config" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Customer" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Frame" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.LoaiN" Width="1.5" PointX="7.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.NguoiDung" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.NongSan" Width="1.5" PointX="10" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Payment" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Role" Width="1.5" PointX="5.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Shipping" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.Size" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.TinTuc" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.UserRole" Width="1.5" PointX="8" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineOrdersModel.User" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__Orders__CustId__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__OrderDeta__Frame__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK_NongSan_LoaiNS" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK_TinTuc_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__OrderDeta__Order__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__OrderDeta__SizeI__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__Orders__PaymentI__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__Orders__Shipping__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__UserRole__RoleId__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineOrdersModel.FK__UserRole__UserId__37A5467C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
