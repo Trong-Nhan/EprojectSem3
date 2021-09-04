@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7C5BB18E-F3D5-4F0A-BBEF-B4B2999D55C1}</ProjectGuid>
+    <ProjectGuid>{2FF7D20D-4D57-4E44-BE67-338DB8FB11A4}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44398</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -45,12 +45,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -61,8 +55,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,33 +80,33 @@
     </Reference>
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -127,13 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Advertisement.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -144,87 +133,99 @@
     <Compile Include="Areas\Admin\Controllers\ConfigController.cs" />
     <Compile Include="Areas\Admin\Controllers\CusController.cs" />
     <Compile Include="Areas\Admin\Controllers\FramesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FrameTypesController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManagePhotoController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\PaymentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShippingController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SizeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
-    <Compile Include="Banner.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Blog.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Config.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Customer.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Frame.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HRM.Context.cs">
+    <Compile Include="Models\BUS\OnlineOrdersBUS.cs" />
+    <Compile Include="Models\BUS\ProductTypesBUS.cs" />
+    <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HRM.Context.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
-    <Compile Include="HRM.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HRM.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HRM.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="LoaiN.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NguoiDung.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NongSan.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrderDetail.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Payment.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shipping.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Size.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TinTuc.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserRole.cs">
-      <DependentUpon>HRM.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asset\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Asset\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Asset\bootstrap\css\bootstrap.css" />
+    <Content Include="Asset\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Asset\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Asset\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Asset\bootstrap\js\bootstrap.js" />
+    <Content Include="Asset\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Asset\themes\css\bootstrappage.css" />
+    <Content Include="Asset\themes\css\flexslider.css" />
+    <Content Include="Asset\themes\css\jquery.fancybox.css" />
+    <Content Include="Asset\themes\css\main.css" />
+    <Content Include="Asset\themes\images\arrow-p.png" />
+    <Content Include="Asset\themes\images\arrow-pleft.png" />
+    <Content Include="Asset\themes\images\bg.png" />
+    <Content Include="Asset\themes\images\carousel\banner-1.jpg" />
+    <Content Include="Asset\themes\images\carousel\banner-2.jpg" />
+    <Content Include="Asset\themes\images\clients\1.png" />
+    <Content Include="Asset\themes\images\clients\14.png" />
+    <Content Include="Asset\themes\images\clients\2.png" />
+    <Content Include="Asset\themes\images\clients\3.png" />
+    <Content Include="Asset\themes\images\clients\35.png" />
+    <Content Include="Asset\themes\images\clients\4.png" />
+    <Content Include="Asset\themes\images\cloth\bootstrap-women-ware1.jpg" />
+    <Content Include="Asset\themes\images\cloth\bootstrap-women-ware2.jpg" />
+    <Content Include="Asset\themes\images\cloth\bootstrap-women-ware3.jpg" />
+    <Content Include="Asset\themes\images\cloth\bootstrap-women-ware4.jpg" />
+    <Content Include="Asset\themes\images\cloth\bootstrap-women-ware5.jpg" />
+    <Content Include="Asset\themes\images\cloth\bootstrap-women-ware6.jpg" />
+    <Content Include="Asset\themes\images\feature_img_1.png" />
+    <Content Include="Asset\themes\images\feature_img_2.png" />
+    <Content Include="Asset\themes\images\feature_img_3.png" />
+    <Content Include="Asset\themes\images\gotop.png" />
+    <Content Include="Asset\themes\images\imgFrames\18.jpg" />
+    <Content Include="Asset\themes\images\imgFrames\19.jpg" />
+    <Content Include="Asset\themes\images\ladies\1.jpg" />
+    <Content Include="Asset\themes\images\ladies\2.jpg" />
+    <Content Include="Asset\themes\images\ladies\3.jpg" />
+    <Content Include="Asset\themes\images\ladies\4.jpg" />
+    <Content Include="Asset\themes\images\ladies\5.jpg" />
+    <Content Include="Asset\themes\images\ladies\6.jpg" />
+    <Content Include="Asset\themes\images\ladies\7.jpg" />
+    <Content Include="Asset\themes\images\ladies\8.jpg" />
+    <Content Include="Asset\themes\images\ladies\9.jpg" />
+    <Content Include="Asset\themes\images\line_bar.png" />
+    <Content Include="Asset\themes\images\logo.png" />
+    <Content Include="Asset\themes\images\m1.png" />
+    <Content Include="Asset\themes\images\m2.png" />
+    <Content Include="Asset\themes\images\m3.png" />
+    <Content Include="Asset\themes\images\m4.png" />
+    <Content Include="Asset\themes\images\m5.png" />
+    <Content Include="Asset\themes\images\m6.png" />
+    <Content Include="Asset\themes\images\pageBanner.png" />
+    <Content Include="Asset\themes\images\project_img2.jpg" />
+    <Content Include="Asset\themes\images\project_img3.jpg" />
+    <Content Include="Asset\themes\images\project_img4.jpg" />
+    <Content Include="Asset\themes\images\project_img6.jpg" />
+    <Content Include="Asset\themes\images\social_icons\logo-fb.png" />
+    <Content Include="Asset\themes\images\social_icons\logo-skype.png" />
+    <Content Include="Asset\themes\images\social_icons\logo-twitter.png" />
+    <Content Include="Asset\themes\images\social_icons\logo-vimeo.png" />
+    <Content Include="Asset\themes\js\common.js" />
+    <Content Include="Asset\themes\js\css\style.css" />
+    <Content Include="Asset\themes\js\jquery-1.7.2.min.js" />
+    <Content Include="Asset\themes\js\jquery.fancybox.js" />
+    <Content Include="Asset\themes\js\jquery.flexslider-min.js" />
+    <Content Include="Asset\themes\js\jquery.scrolltotop.js" />
+    <Content Include="Asset\themes\js\superfish.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -234,15 +235,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HRM.Context.tt">
+    <Content Include="Models\Generated\Database.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HRM.edmx</DependentUpon>
-      <LastGenOutput>HRM.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="HRM.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HRM.edmx</DependentUpon>
-      <LastGenOutput>HRM.cs</LastGenOutput>
+      <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
     <Content Include="Public\Admin\admin\css\AdminLTE.css" />
     <Content Include="Public\Admin\admin\css\bootstrap-colorpicker.min.css" />
@@ -308,6 +303,7 @@
     <Content Include="Public\Admin\admin\dist\js\slug.js" />
     <Content Include="Public\Admin\admin\fonts\fontawesome-webfont.svg" />
     <Content Include="Public\Admin\admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Public\Admin\admin\images\avatar.jpg" />
     <Content Include="Public\Admin\admin\images\no-ig.png" />
     <Content Include="Public\Admin\admin\js\adminlte.min.js" />
     <Content Include="Public\Admin\admin\js\angular.min.js" />
@@ -319,6 +315,7 @@
     <Content Include="Public\Admin\admin\js\jquery-ui.js" />
     <Content Include="Public\Admin\admin\js\jquery.min.js" />
     <Content Include="Public\Admin\admin\js\jquery.nestable.js" />
+    <Content Include="Public\Admin\admin\js\previewFile.js" />
     <Content Include="Public\Admin\admin\tinymce\config.js" />
     <Content Include="Public\Admin\admin\tinymce\license.txt" />
     <Content Include="Public\Admin\admin\tinymce\plugins\advlist\plugin.min.js" />
@@ -2858,161 +2855,6 @@
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\aws\aws-sdk-php\src\XRay\Exception\XRayException.php" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\aws\aws-sdk-php\src\XRay\XRayClient.php" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\bin\jp.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\ckfinder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\config.template.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\ckfinder-logo.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\doc-m.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\DoxygenLayout.xml" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\footer.html" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\header.html" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\icons.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\ckeditor_image_dialog.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\ckfinder_overview.draw.io.xml" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\ckfinder_overview.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\ckfinder_workflow.draw.io.xml" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\dropbox_token.gif" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\missing_json_mimetype.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\images\request_workflow.png" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\style.css" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\license.txt" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Acl\Acl.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Acl\AclInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Acl\MaskBuilder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Acl\Permission.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Acl\User\RoleContextInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Acl\User\SessionRoleContext.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ArgumentResolver.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Authentication\AuthenticationInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Authentication\CallableAuthentication.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\AwsS3.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\Azure.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\Cache\Storage\Memory.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\Dropbox.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\EmulateRenameDirectoryInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\Ftp.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Adapter\Local.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\Backend.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Backend\BackendFactory.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Cache\Adapter\AdapterInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Cache\Adapter\BackendAdapter.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Cache\CacheManager.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\CKFinder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\CommandResolver.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\CommandAbstract.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\CopyFiles.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\CreateFolder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\DeleteFiles.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\DeleteFolder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\DownloadFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\FileUpload.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\GetFiles.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\GetFileUrl.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\GetFolders.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\GetResizedImages.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\ImageEdit.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\ImageInfo.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\ImagePreview.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\ImageResize.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\Init.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\MoveFiles.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\Operation.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\Proxy.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\QuickUpload.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\RenameFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\RenameFolder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\SaveImage.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Command\Thumbnail.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Config.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ContainerAwareInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Error.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\AfterCommandEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\BeforeCommandEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\CKFinderEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\CopyFileEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\CreateFolderEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\DeleteFileEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\DeleteFolderEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\DownloadFileEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\EditFileEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\FileUploadEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\MoveFileEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\ProxyDownloadEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\RenameFileEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\RenameFolderEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Event\ResizeImageEvent.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ExceptionHandler.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\AccessDeniedException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\AlreadyExistsException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\CKFinderException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\FileNotFoundException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\FolderNotFoundException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidCommandException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidConfigException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidCsrfTokenException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidExtensionException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidNameException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidPluginException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidRequestException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidResourceTypeException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\InvalidUploadException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\MethodNotAllowedException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Exception\UnauthorizedException.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\CopiedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\DeletedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\DownloadedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\EditedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\EditedImage.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\ExistingFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\File.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\MovedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\RenamedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\File\UploadedFile.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\Folder\Folder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\Folder\WorkingFolder.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Filesystem\Path.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Image.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Operation\OperationManager.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Plugin\PluginInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Request\Transformer\JsonTransformer.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Request\Transformer\TransformerInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ResizedImage\ResizedImage.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ResizedImage\ResizedImageAbstract.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ResizedImage\ResizedImageRepository.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ResourceType\ResourceType.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\ResourceType\ResourceTypeFactory.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Response\JsonResponse.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Security\Csrf\DoubleSubmitCookieTokenValidator.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Security\Csrf\TokenValidatorInterface.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Thumbnail\Thumbnail.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Thumbnail\ThumbnailRepository.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Translator.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\Utils.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\bootstrap.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Acl\AclTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Acl\PermissionTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Acl\User\SessionRoleContexTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Backend\BackendFactoryTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Backend\BackendTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Cache\CacheTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\CommandResolverTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Config\ConfigTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Filesystem\File\FileTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Filesystem\PathTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Fixtures\Config.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Fixtures\config_test.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Fixtures\init_test.xml" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Fixtures\plugins\Test\Test.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Fixtures\ResponseNode.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Mocks\Acl\User\MockRoleContext.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Mocks\Command\Test.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Operation\OperationManagerTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Plugin\DummyPlugin.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Plugin\PluginTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\ResourceType\ResourceTypeTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\ScaledImage\ScaledImageTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Thumbnail\ThumbnailTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\TranslatorTest.php" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\UtilsTest.php" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\composer\autoload_classmap.php" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\composer\autoload_files.php" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\composer\autoload_namespaces.php" />
@@ -4757,6 +4599,43 @@
     <Content Include="Public\Admin\pages\style.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\ADS\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ADS\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ADS\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Blog\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Blog\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Blog\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Config\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Config\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Config\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Cus\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Frames\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Frames\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MainAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MainAdmin\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagePhoto\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Payments\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Payments\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\MainLayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Shipping\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Shipping\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Asset\.vs\MyImage\config\applicationhost.config" />
+    <Content Include="Asset\.vs\shopper\config\applicationhost.config" />
+    <Content Include="Asset\.vs\slnx.sqlite" />
+    <Content Include="Asset\.vs\tasks.vs.json" />
+    <Content Include="Asset\.vs\VSWorkspaceState.json" />
     <Content Include="Public\Admin\admin\dist\css\adminlte.css.map" />
     <Content Include="Public\Admin\admin\dist\css\adminlte.min.css.map" />
     <Content Include="Public\Admin\admin\dist\css\alt\adminlte.components.css.map" />
@@ -4860,105 +4739,6 @@
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\aws\aws-sdk-php\LICENSE.md" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\aws\aws-sdk-php\NOTICE.md" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\bin\var-dump-server" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.gitignore" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\config" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\description" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\HEAD" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\applypatch-msg.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\commit-msg.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\fsmonitor-watchman.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\post-update.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\pre-applypatch.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\pre-commit.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\pre-merge-commit.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\pre-push.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\pre-rebase.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\pre-receive.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\prepare-commit-msg.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\hooks\update.sample" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\index" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\info\exclude" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\info\refs" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\logs\HEAD" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\logs\refs\heads\master" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\logs\refs\remotes\origin\HEAD" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\0c\75a0669d462233d0e8ceda8b2883b07ea51391" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\3a\73d131f7b628c4b4fec62077f98a653116f2a6" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\4e\7e9b7db421e58588d9e61ffea48b082dce9d8f" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\5d\5ee234acd5112c3c6cfefccf0e3402b71567a4" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\68\60c0ea14bbc45dee3b7545668fee46e861fa66" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\c7\4027d60f618b6145fb9d4ac9e81a0582694eeb" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\info\packs" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\pack\pack-c241d52903eba33865aff4ce17358ac7e6ceecfc.idx" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\objects\pack\pack-c241d52903eba33865aff4ce17358ac7e6ceecfc.pack" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\ORIG_HEAD" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\packed-refs" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\refs\heads\master" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\refs\remotes\origin\HEAD" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.php_cs" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\composer.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\composer.lock" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\builddoc.sh" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\ckfinder.doxyfile" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\Index.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\ApplicationStructure.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\Commands.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\Configuration.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\Debugging.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\HowTo.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\Integration.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\LaravelPackage.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\Plugins.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\QuickStart.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\SymfonyBundle.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\SystemRequirements.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\dev\doc\manual\Upgrading.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\phpunit.xml.dist" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\README.md" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\bg.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\ca.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\cs.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\cy.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\da.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\de.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\el.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\en.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\eo.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\es-mx.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\es.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\et.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\eu.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\fa.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\fi.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\fr.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\gu.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\he.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\hi.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\hr.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\hu.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\id.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\it.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\ja.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\ko.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\ku.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\lt.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\lv.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\nb.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\nl.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\nn.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\pl.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\pt-br.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\ro.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\ru.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\sk.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\sl.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\sr.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\sv.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\tr.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\vi.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\zh-cn.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\src\CKSource\CKFinder\locales\zh-tw.json" />
-    <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\tests\CKSource\CKFinder\Tests\Fixtures\init_test.json" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\composer\installed.json" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\composer\LICENSE" />
     <Content Include="Public\Admin\ckfinder\core\connector\php\vendor\graham-campbell\guzzle-factory\composer.json" />
@@ -5219,59 +4999,26 @@
     <Content Include="Public\Admin\pages\Jost\TrueType\Jost-900-Black.ttf" />
     <Content Include="Public\Admin\pages\Jost\TrueType\Jost-900-BlackItalic.ttf" />
     <Content Include="Public\Admin\pages\plugins\owl_carousel\README.md" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\MainLayoutAdmin.cshtml" />
-    <Content Include="Areas\Admin\Views\MainAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Size\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Banner\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Blog\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Frames\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\ADS\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Payments\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shipping\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Config\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Role\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Cus\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Size\Edit.cshtml" />
-    <EntityDeploy Include="HRM.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HRM.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="HRM.edmx.diagram">
-      <DependentUpon>HRM.edmx</DependentUpon>
-    </Content>
-    <Content Include="Areas\Admin\Views\Size\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Role\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Blog\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Role\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Blog\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Frames\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Banner\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Banner\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\ADS\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\ADS\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Order\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Payments\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Shipping\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Config\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Config\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\ManagePhoto\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\MainAdmin\Login.cshtml" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
+    <Content Include="Areas\Admin\Views\Frames\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\FrameTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\FrameTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\FrameTypes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\FrameTypes\TemporaryDelete.cshtml" />
+    <Content Include="Areas\Admin\Views\Frames\TemporaryDelete.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -5286,17 +5033,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Shared\_ProductTypes.cshtml" />
+    <Content Include="Views\ProductTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Models\" />
-    <Folder Include="Public\Admin\admin\tinymce\plugins\codemirror\codemirror\" />
-    <Folder Include="Public\Admin\ckfinder\admin\tinymce\plugins\codemirror\codemirror\" />
-    <Folder Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\branches\" />
-    <Folder Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\.git\refs\tags\" />
-    <Folder Include="Public\Admin\ckfinder\core\connector\php\vendor\league\flysystem-azure\" />
-    <Folder Include="Public\Admin\thumbs\" />
+    <Folder Include="Asset\.vs\MyImage\v16\" />
+    <Folder Include="Asset\.vs\shopper\v16\" />
+    <Folder Include="Asset\themes\js\images\" />
+    <Folder Include="Asset\themes\js\js\" />
+    <Folder Include="Public\Admin\ckfinder\core\connector\php\vendor\cksource\ckfinder\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -5308,8 +5059,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -5330,9 +5081,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62935</DevelopmentServerPort>
+          <DevelopmentServerPort>58786</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62935/</IISUrl>
+          <IISUrl>https://localhost:44398/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -5346,7 +5097,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

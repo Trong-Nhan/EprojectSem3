@@ -1,42 +1,213 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link href="~/Asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Asset/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <link href="~/Asset/themes/css/bootstrappage.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link href="~/Asset/themes/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Asset/themes/css/main.css" rel="stylesheet" />
+
+    <!-- scripts -->
+    <script src="~/Asset/themes/js/jquery-1.7.2.min.js"></script>
+    <script src="~/Asset/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Asset/themes/js/superfish.js"></script>
+    <script src="~/Asset/themes/js/jquery.scrolltotop.js"></script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="span4">
+                <form method="POST" class="search_form">
+                    <input type="text" class="input-block-level search-query" Placeholder="Search Products & Designs">
+                </form>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <div class="span8">
+                <div class="account pull-right">
+                    <ul class="user-menu">
+                        <li>@Html.ActionLink("My Account", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Your Cart", "Cart", "Home")</li>
+                        <li>@Html.ActionLink("Checkout", "Checkout", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Register", "Home")</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">
+                <a href="@Url.Action("Index","Home")" class="logo pull-left"><img src="~/Asset/themes/images/logo.png" class="site_logo" alt=""></a>
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>
+                            @Html.ActionLink("Products", "Index", "Products")                            
+                        </li>
+                        @Html.Partial("_ProductTypes",OnlineOrder.Models.BUS.ProductTypesBUS.ListProduct())
+                        <li>
+                            <a href="./products.html">Photo Books</a>
+                            <ul>
+                                <li><a href="./products.html">Hardcover</a></li>
+                                <li><a href="./products.html">Layflat Hardcover</a></li>
+                                <li><a href="./products.html">Premium Layflat</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./products.html">Canvas</a>
+                            <ul>
+                                <li><a href="./products.html">Collage Canvas + More</a></li>
+                                <li><a href="./products.html">Canvas Sets</a></li>
+                                <li><a href="./products.html">Split Canvas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./products.html">Home Décor</a>
+                            <ul>
+                                <li><a href="./products.html">Tabletop</a></li>
+                                <li><a href="./products.html">Wall Décor</a></li>
+                                <li><a href="./products.html">Collage Décor</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./products.html">Photo Tiles</a>
+                            <ul>
+                                <li><a href="./products.html">Multiphoto</a></li>
+                                <li><a href="./products.html">Metallic</a></li>
+                                <li><a href="./products.html">Photogrid</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./products.html">Gifts</a>
+                            <ul>
+                                <li><a href="./products.html">Arctic Fleece Blanket</a></li>
+                                <li><a href="./products.html">Throw Pillows</a></li>
+                                <li><a href="./products.html">Magnets</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./products.html">Mugs</a>
+                            <ul>
+                                <li><a href="./products.html">Ceramic Mugs</a></li>
+                                <li><a href="./products.html">Color Accent</a></li>
+                                <li><a href="./products.html">Travel Mugs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./products.html">Calendars</a>
+                            <ul>
+                                <li><a href="./products.html">Wall Calendar</a></li>
+                                <li><a href="./products.html">Desk Calendar</a></li>
+                                <li><a href="./products.html">Wood Block Desk Calendar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <section id="footer-bar">
+            <div class="row">
+                <div class="span3">
+                    <h4>Navigation</h4>
+                    <ul class="nav">
+                        <li>@Html.ActionLink("Homepage", "Index", "Home")</li>
+                        <li><a href="#">About Us</a></li>
+                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Your Cart", "Cart", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Register", "Home")</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <h4>My Account</h4>
+                    <ul class="nav">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="span5">
+                    <p class="logo"><img src="~/Asset/themes/images/logo.png" class="site_logo" alt=""></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+                    <br />
+                    <span class="social_icons">
+                        <a class="facebook" href="#">Facebook</a>
+                        <a class="twitter" href="#">Twitter</a>
+                        <a class="skype" href="#">Skype</a>
+                        <a class="vimeo" href="#">Vimeo</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section id="copyright">
+            <span>2021 - Hanoi - Socialist Republic of Vietnam</span>
+        </section>
     </div>
+    <script src="~/Asset/themes/js/common.js"></script>
+    @*Product Detail*@
+    <script>
+        $(function () {
+            $('#myTab a:first').tab('show');
+            $('#myTab a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+        })
+        $(document).ready(function () {
+            $('.thumbnail').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none'
+            });
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+            $('#myCarousel-2').carousel({
+                interval: 2500
+            });
+        });
+    </script>
+    <link href="~/Asset/themes/css/jquery.fancybox.css" rel="stylesheet" />
+    <script src="~/Asset/themes/js/jquery.fancybox.js"></script>
+    @* Home *@
+    <script src="~/Asset/themes/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+    @* Register *@
+    <script>
+	$(document).ready(function() {
+		$('#checkout').click(function (e) {
+			document.location.href = "@Url.Action("Checkout","Home")";
+		})
+	});
+    </script>
+    @* Cart *@
+    <script>
+	$(document).ready(function() {
+		$('#checkout').click(function (e) {
+			document.location.href = "@Url.Action("Checkout","Home")";
+		})
+	});
+    </script>
 </body>
 </html>

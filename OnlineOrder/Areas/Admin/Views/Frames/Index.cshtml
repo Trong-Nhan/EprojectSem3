@@ -1,36 +1,16 @@
-﻿
+﻿@model IEnumerable<OnlineOrdersConnection.Frame>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/MainLayoutAdmin.cshtml";
 }
 <section class="content">
     <div class="row">
-        <div class="col-md-4">
-            <div class="box box-info">
-                <div class="box-header">
-                    <h3 class="box-title">Add new frames</h3>
-                </div>
-                <div class="box-body">
-                    <form action="" method="POST" role="form">
-                        <div class="form-group">
-                            <label for="">Size</label>
-                            <input type="text" class="form-control" id="" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Price</label>
-                            <input type="text" class="form-control" id="" name="name">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
-                    </form>
-                </div>
-            </div>
-        </div>
         <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3 class="panel-title">List size</h3>
+                            <h3 class="panel-title">List Frame Types</h3>
                         </div>
                     </div>
                 </div>
@@ -41,32 +21,47 @@
                                 <th>#</th>
                                 <th>Frames</th>
                                 <th>Price</th>
+                                <th>Image_1</th>
+                                <th>FrameTypeId</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                                <tr>
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
-                                         cm
-                                    </td>
-                                    <td>
-                                         VND
-                                    </td>
-                                    <td>
-                                        <form action="" method="POST" class="form-inline" role="form">
-                                            <a href="">
-                                                <i class="btn btn-xs btn-danger fa fa-edit"></i>
-                                            </a>
-                                            <a href="">
-                                                <i class="btn btn-xs btn-warning fa fa-trash"></i>
-                                            </a>
-                                        </form>
-                                    </td>
-                                </tr>
 
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>
+                                    @item.Id
+                                </td>
+                                <td>
+                                    @item.Frames
+                                </td>
+                                <td>
+                                    @item.Price
+                                </td>
+                                <td>
+                                    <img src="~/Asset/themes/images/imgFrames/@item.Image_1" style="width:50px; height:50px;" alt="Alternate Text" />
+                                </td>
+                                <td>
+                                    @item.FrameTypeId
+                                </td>
+                                <td>
+                                    @item.Status
+                                </td>
+                                <td>
+                                    <form action="" method="POST" class="form-inline" role="form">
+                                        <a href="@Url.Action("Edit","Frames",new { id = @item.Id})">
+                                            <i class="btn btn-xs btn-danger fa fa-edit"></i>
+                                        </a>
+                                        <a href="@Url.Action("TemporaryDelete","Frames",new { id = @item.Id})">
+                                            <i class="btn btn-xs btn-warning fa fa-trash"></i>
+                                        </a>
+                                    </form>
+                                </td>
+                            </tr>
+                            }
                         </tbody>
                     </table>
                     <div class="text-center">

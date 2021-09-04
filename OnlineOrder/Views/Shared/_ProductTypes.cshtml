@@ -1,0 +1,10 @@
+﻿@model IEnumerable<OnlineOrdersConnection.FrameType>
+<li>
+    <a href="#">Product Types</a>
+    <ul>        
+        @foreach(var item in Model)
+        {
+            <li><a href="@Url.Action("Index","ProductTypes",new {id = item.Id})">@item.FrameTypes</a></li>
+        }
+    </ul>
+</li>
