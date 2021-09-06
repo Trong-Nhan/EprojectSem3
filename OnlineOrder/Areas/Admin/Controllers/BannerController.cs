@@ -8,6 +8,7 @@ namespace OnlineOrder.Areas.Admin.Controllers
 {
     public class BannerController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/Banner
         public ActionResult Index()
         {

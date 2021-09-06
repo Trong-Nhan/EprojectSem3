@@ -8,6 +8,7 @@ namespace OnlineOrder.Areas.Admin.Controllers
 {
     public class BlogController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/Blog
         public ActionResult Index()
         {

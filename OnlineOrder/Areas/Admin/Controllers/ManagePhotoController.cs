@@ -8,6 +8,7 @@ namespace OnlineOrder.Areas.Admin.Controllers
 {
     public class ManagePhotoController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/ManagePhoto
         public ActionResult Index()
         {

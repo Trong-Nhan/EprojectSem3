@@ -8,6 +8,7 @@ namespace OnlineOrder.Areas.Admin.Controllers
 {
     public class ADSController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/ADS
         public ActionResult Index()
         {

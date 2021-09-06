@@ -39,7 +39,7 @@
                         <li>@Html.ActionLink("My Account", "Index", "Home")</li>
                         <li>@Html.ActionLink("Your Cart", "Cart", "Home")</li>
                         <li>@Html.ActionLink("Checkout", "Checkout", "Home")</li>
-                        <li>@Html.ActionLink("Login", "Register", "Home")</li>
+                        <li>@Html.Partial("_LoginPartial")</li>
                     </ul>
                 </div>
             </div>
@@ -52,9 +52,9 @@
                 <nav id="menu" class="pull-right">
                     <ul>
                         <li>
-                            @Html.ActionLink("Products", "Index", "Products")                            
+                            @Html.ActionLink("Products", "Index", "Products")
                         </li>
-                        @Html.Partial("_ProductTypes",OnlineOrder.Models.BUS.ProductTypesBUS.ListProduct())
+                        @Html.Partial("_ProductTypes", OnlineOrder.Models.BUS.ProductTypesBUS.ListProduct())
                         <li>
                             <a href="./products.html">Photo Books</a>
                             <ul>
@@ -209,5 +209,8 @@
 		})
 	});
     </script>
+
+    @RenderSection("scripts", required: false)
+
 </body>
 </html>

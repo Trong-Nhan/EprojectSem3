@@ -48,8 +48,22 @@
                             <input type="checkbox" value=""> Be sure to include why it's great
                         </label>
                         <p>&nbsp;</p>
+                        @*@if (User.Identity.IsAuthenticated)
+                            {
+                                using (Html.BeginForm("Add", "Orders", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="framesid" value="@Model.Id" />
+                                    <label>Qty:</label>
+                                    <input type="number" name="quantity" class="span1" placeholder="1" min="1" max="1000" required>
+                                    <button class="btn btn-inverse" type="submit">Add to cart</button>
+                                }
+                            }
+                            else
+                            {
+                                <span>Please login to continue</span>
+                            }*@
                         <label>Qty:</label>
-                        <input type="text" class="span1" placeholder="1">
+                        <input type="number" name="quantity" class="span1" placeholder="1" min="1" max="1000" required>
                         <button class="btn btn-inverse" type="submit">Add to cart</button>
                     </form>
                 </div>

@@ -8,6 +8,7 @@ namespace OnlineOrder.Areas.Admin.Controllers
 {
     public class CusController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/Cus
         public ActionResult Index()
         {

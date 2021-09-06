@@ -10,6 +10,7 @@ namespace OnlineOrder.Areas.Admin.Controllers
 {
     public class FrameTypesController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/FrameTypes
         public ActionResult Index()
         {
