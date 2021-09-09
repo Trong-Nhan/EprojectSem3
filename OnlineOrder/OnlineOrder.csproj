@@ -190,6 +190,7 @@
     <Compile Include="Areas\Admin\Controllers\SizeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
@@ -199,6 +200,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BUS\BlogBUS.cs" />
     <Compile Include="Models\BUS\OnlineOrdersBUS.cs" />
     <Compile Include="Models\BUS\OrderDetailBUS.cs" />
     <Compile Include="Models\BUS\PaymentsBUS.cs" />
@@ -5095,6 +5097,7 @@
     <Content Include="Areas\Admin\Views\Shipping\TemporaryDelete.cshtml" />
     <Content Include="Areas\Admin\Views\Payments\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Payments\TemporaryDelete.cshtml" />
+    <Content Include="Areas\Admin\Views\Blog\TemporaryDelete.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -5147,11 +5150,17 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\ProductTypes\Index.cshtml" />
     <Content Include="Views\Shared\_ProductTypes.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Shared\_TopNewProducts.cshtml" />
+    <Content Include="Views\Shared\_TopHotProducts.cshtml" />
+    <Content Include="Views\Shared\_BlogPartial.cshtml" />
+    <Content Include="Views\Blogs\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Asset\.vs\MyImage\v16\" />
     <Folder Include="Asset\.vs\shopper\v16\" />
+    <Folder Include="Asset\themes\images\imgBlogs\" />
     <Folder Include="Asset\themes\images\imgPayments\" />
     <Folder Include="Asset\themes\js\images\" />
     <Folder Include="Asset\themes\js\js\" />
