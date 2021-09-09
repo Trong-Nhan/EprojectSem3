@@ -33,10 +33,5 @@ namespace OnlineOrder.Controllers
             return View();
         }
 
-        public ActionResult Blog()
-        {
-            return View();
-        }
-
     }
 }

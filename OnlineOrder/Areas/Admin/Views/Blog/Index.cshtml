@@ -1,17 +1,29 @@
-﻿@model IEnumerable<OnlineOrdersConnection.Blog>
+﻿
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/MainLayoutAdmin.cshtml";
 }
-
 <section class="content">
     <div class="row">
-        <div class="col-md-15">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-md-12">
-                            <h3 class="panel-title">List Blog</h3>
+                        <div class="col-md-8">
+                            <h3 class="panel-title">Blog list</h3>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="input-form" action="" method="GET" role="form">
+                                <div class="input-group">
+                                    <input class="form-control" type="search" placeholder="Search" name="key"
+                                           aria-label="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-navbar" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -20,59 +32,37 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Main Image</th>
                                 <th>Title</th>
-                                <th>Summary</th>
-                                <th>Content</th>
-                                <th>Image</th>
-                                <th>Status</th>
-                                <th>View</th>
+                                <th>Date Submitted</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-
                         <tbody>
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>
-                                        @item.Id
-                                    </td>
-                                    <td>
-                                        @item.Title
-                                    </td>
-                                    <td>
-                                        @item.Summary
-                                    </td>
-                                    <td>
-                                        @item.Content
-                                    </td>
-                                    <td>
-                                        <img src="~/Asset/themes/images/imgBlogs/@item.Image" style="width:50px; height:50px;" alt="Alternate Text" />
-                                    </td>
-                                    <td>
-                                        @item.Status
-                                    </td>
-                                    <td>
-                                        @item.View
-                                    </td>
-                                    <td>
-                                        <form action="" method="POST" class="form-inline" role="form">
-                                            <a href="@Url.Action("Edit","Blog",new { id = @item.Id})">
-                                                <i class="btn btn-xs btn-danger fa fa-edit"></i>
-                                            </a>
-                                            <a href="@Url.Action("TemporaryDelete","Blog",new { id = @item.Id})">
-                                                <i class="btn btn-xs btn-warning fa fa-trash"></i>
-                                            </a>
-                                        </form>
-                                    </td>
-                                </tr>
-                            }
+                <tr>
+                    <td></td>
+                    <td>
+                        <img src="" alt="" width="70px">
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <form style="display: inline-block" method="POST" action="">
+                                <a href="">
+                                    <i class="btn btn-xs btn-danger fa fa-edit"></i>
+                                </a>
+                                <button type="submit" class="btn btn-xs btn-warning fa fa-trash"></button>
+                        </form>
+                        <a href="">
+                            <i class="btn btn-xs btn-success fa fa-eye"></i>
+                        </a>
+                    </td>
+                </tr>
                         </tbody>
                     </table>
                     <div class="text-center">
-                    </div>
-                    <div class="text-center">
-                        <div class="clearfix"></div>
+                        <ul class="pagination">
+                        </ul>
                     </div>
                 </div>
             </div>

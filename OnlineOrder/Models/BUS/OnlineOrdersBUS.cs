@@ -19,16 +19,6 @@ namespace OnlineOrder.Models.BUS
             var db = new OnlineOrdersConnectionDB();
             return db.SingleOrDefault<Frame>("select * from Frames where Id = @0",a);
         }
-        public static IEnumerable<Frame> TopNewProduct()
-        {
-            var db = new OnlineOrdersConnectionDB();
-            return db.Query<Frame>("select Top 4 * from Frames where Note = N'New'");
-        }
-        public static IEnumerable<Frame> TopHotProduct()
-        {
-            var db = new OnlineOrdersConnectionDB();
-            return db.Query<Frame>("select Top 4 * from Frames where [View] > 0");
-        }
         //--------------------Admin-----------------------
         public static IEnumerable<Frame> ListProductAdmin()
         {
