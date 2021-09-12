@@ -1,0 +1,11 @@
+﻿@model IEnumerable<OnlineOrdersConnection.FrameType>
+
+<div class="block">
+    <ul class="nav nav-list">
+        <li class="nav-header">SUB CATEGORIES</li>
+        @foreach (var item in Model)
+        {
+            <li><a href="@Url.Action("Index","ProductTypes",new {id = item.Id})">@item.FrameTypes</a></li>
+        }
+    </ul>
+</div>

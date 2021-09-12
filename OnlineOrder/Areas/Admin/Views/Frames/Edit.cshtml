@@ -14,68 +14,82 @@
                 <div class="box-body">
                     @using (Html.BeginForm("Edit", "Frames", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
-                        <form action="" method="POST" role="form" enctype="multipart/form-data">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Image_1</label>
-                                        <div class="input-group">
-                                            <input type="file" class="form-control" id="image" name="Image_1" value="@Model.Image_1">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Id</label>
-                                        <input type="text" class="form-control" name="Id" value="@Model.Id" readonly>
+                    <form action="" method="POST" role="form" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Image_1</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="image" name="Image_1" value="@Model.Image_1">
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Frames</label>
-                                        <input type="text" class="form-control" name="Frames" value="@Model.Frames" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Price</label>
-                                        <input type="number" class="form-control" name="Price" value="@Model.Price" required>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Id</label>
+                                    <input type="text" class="form-control" name="Id" value="@Model.Id" readonly>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Frame Types</label>
-                                        @Html.DropDownList("FrameTypeId", null, new { @class = "form-control" });
-                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Frames</label>
+                                    <input type="text" class="form-control" name="Frames" value="@Model.Frames" required>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Status</label>
-                                        <select name="Status" class="form-control">
-                                            @if (Model.Status == 1)
-                                            {
-                                                <option value="0">Open</option>
-                                                <option value="1" selected>Blocked</option>
-                                            }
-                                            else
-                                            {
-                                                <option value="0" selected>Open</option>
-                                                <option value="1">Blocked</option>
-                                            }
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Price</label>
+                                    <input type="number" class="form-control" name="Price" value="@Model.Price" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Frame Types</label>
+                                    @Html.DropDownList("FrameTypeId", null, new { @class = "form-control" });
+                                </div>
+                            </div>                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">View</label>
+                                    <input type="number" class="form-control" name="View" value="@Model.View" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select name="Status" class="form-control">
+                                        @if (Model.Status == 1)
+                                        {
+                                            <option value="0">Open</option>
+                                            <option value="1" selected>Blocked</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="0" selected>Open</option>
+                                            <option value="1">Blocked</option>
+                                        }
 
-                                        </select>
-                                    </div>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="box-footer">
-                                <a href="@Url.Action("Index","Frames")" class="btn btn-default">Cancel</a>
-                                <button type="submit" class="btn btn-primary pull-right">Update</button>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Note</label>
+                                    <input type="text" class="form-control" name="Note" value="@Model.Note" required>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="box-footer">
+                            <a href="@Url.Action("Index","Frames")" class="btn btn-default">Cancel</a>
+                            <button type="submit" class="btn btn-primary pull-right">Update</button>
+                        </div>
+                    </form>
                     }
                 </div>
             </div>

@@ -533,7 +533,7 @@ namespace OnlineOrdersConnection
 
 
 
-		[Column] public int? VIEW { get; set; }
+		[Column] public int? View { get; set; }
 
 
 
@@ -738,6 +738,18 @@ namespace OnlineOrdersConnection
 
 
 		[Column] public int? FrameTypeId { get; set; }
+
+
+
+
+
+		[Column] public int? View { get; set; }
+
+
+
+
+
+		[Column] public string Note { get; set; }
 
 
 

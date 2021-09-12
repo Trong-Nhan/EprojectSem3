@@ -1,0 +1,16 @@
+﻿@model IEnumerable<OnlineOrdersConnection.Frame>
+
+<div class="block">
+    <h4 class="title"><strong>Best</strong> Seller</h4>
+    <ul class="small-product">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@Url.Action("Details","Products",new { id = @item.Id })" title="Praesent tempor sem sodales">
+                    <img src="~/Asset/themes/images/imgFrames/@item.Image_1" alt="Praesent tempor sem sodales">
+                </a>
+                <a href="@Url.Action("Details","Products",new { id = @item.Id })">@item.Frames</a>
+            </li>
+        }
+    </ul>
+</div>

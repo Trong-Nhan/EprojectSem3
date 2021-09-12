@@ -50,7 +50,15 @@
                                     <label for="">Frame Types Id</label>
                                     <input type="number" class="form-control" name="FrameTypeId" value="@Model.FrameTypeId" readonly>
                                 </div>
+                            </div>                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">View</label>
+                                    <input type="number" class="form-control" name="View" value="@Model.View" readonly>
+                                </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Status</label>
@@ -64,6 +72,12 @@
                                             <option value="0" selected>Open</option>
                                         }
                                     </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Note</label>
+                                    <input type="text" class="form-control" name="Note" value="@Model.Note" readonly>
                                 </div>
                             </div>
                         </div>

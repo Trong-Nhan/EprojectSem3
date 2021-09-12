@@ -55,7 +55,7 @@
                             @Html.ActionLink("Products", "Index", "Products")
                         </li>
                         @Html.Partial("_ProductTypes", OnlineOrder.Models.BUS.ProductTypesBUS.ListProduct())
-                        <li>
+                        @*<li>
                             <a href="./products.html">Photo Books</a>
                             <ul>
                                 <li><a href="./products.html">Hardcover</a></li>
@@ -110,7 +110,7 @@
                                 <li><a href="./products.html">Desk Calendar</a></li>
                                 <li><a href="./products.html">Wood Block Desk Calendar</a></li>
                             </ul>
-                        </li>
+                        </li>*@
                     </ul>
                 </nav>
             </div>
@@ -125,7 +125,7 @@
                         <li><a href="#">About Us</a></li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Your Cart", "Cart", "Home")</li>
-                        <li>@Html.ActionLink("Login", "Register", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Account")</li>
                     </ul>
                 </div>
                 <div class="span4">
