@@ -467,13 +467,13 @@ namespace OnlineOrdersConnection
 
 
 
-		[Column] public byte? Sort { get; set; }
-
-
-
-
-
 		[Column] public string Description { get; set; }
+
+
+
+
+
+		[Column] public byte? Status { get; set; }
 
 
 
@@ -843,13 +843,19 @@ namespace OnlineOrdersConnection
 
 
 
-		[Column] public DateTime? CreatedAt { get; set; }
+		[Column] public string Image { get; set; }
 
 
 
 
 
-		[Column] public DateTime? UpdatedAt { get; set; }
+		[Column] public double? TotalPrice { get; set; }
+
+
+
+
+
+		[Column] public string CusId { get; set; }
 
 
 

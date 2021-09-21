@@ -36,8 +36,8 @@
             <div class="span8">
                 <div class="account pull-right">
                     <ul class="user-menu">
-                        <li>@Html.ActionLink("My Account", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Your Cart", "Cart", "Home")</li>
+                        <li>@Html.ActionLink("My Account", "Index", "Manage")</li>
+                        <li>@Html.ActionLink("Your Cart", "Index", "OrderDetail")</li>
                         <li>@Html.ActionLink("Checkout", "Checkout", "Home")</li>
                         <li>@Html.Partial("_LoginPartial")</li>
                     </ul>
@@ -54,63 +54,7 @@
                         <li>
                             @Html.ActionLink("Products", "Index", "Products")
                         </li>
-                        @Html.Partial("_ProductTypes", OnlineOrder.Models.BUS.ProductTypesBUS.ListProduct())
-                        @*<li>
-                            <a href="./products.html">Photo Books</a>
-                            <ul>
-                                <li><a href="./products.html">Hardcover</a></li>
-                                <li><a href="./products.html">Layflat Hardcover</a></li>
-                                <li><a href="./products.html">Premium Layflat</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./products.html">Canvas</a>
-                            <ul>
-                                <li><a href="./products.html">Collage Canvas + More</a></li>
-                                <li><a href="./products.html">Canvas Sets</a></li>
-                                <li><a href="./products.html">Split Canvas</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./products.html">Home Décor</a>
-                            <ul>
-                                <li><a href="./products.html">Tabletop</a></li>
-                                <li><a href="./products.html">Wall Décor</a></li>
-                                <li><a href="./products.html">Collage Décor</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./products.html">Photo Tiles</a>
-                            <ul>
-                                <li><a href="./products.html">Multiphoto</a></li>
-                                <li><a href="./products.html">Metallic</a></li>
-                                <li><a href="./products.html">Photogrid</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./products.html">Gifts</a>
-                            <ul>
-                                <li><a href="./products.html">Arctic Fleece Blanket</a></li>
-                                <li><a href="./products.html">Throw Pillows</a></li>
-                                <li><a href="./products.html">Magnets</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./products.html">Mugs</a>
-                            <ul>
-                                <li><a href="./products.html">Ceramic Mugs</a></li>
-                                <li><a href="./products.html">Color Accent</a></li>
-                                <li><a href="./products.html">Travel Mugs</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./products.html">Calendars</a>
-                            <ul>
-                                <li><a href="./products.html">Wall Calendar</a></li>
-                                <li><a href="./products.html">Desk Calendar</a></li>
-                                <li><a href="./products.html">Wood Block Desk Calendar</a></li>
-                            </ul>
-                        </li>*@
+                        @Html.Partial("_ProductTypes", OnlineOrder.Models.BUS.ProductTypesBUS.ListProduct())                        
                     </ul>
                 </nav>
             </div>
@@ -124,14 +68,14 @@
                         <li>@Html.ActionLink("Homepage", "Index", "Home")</li>
                         <li><a href="#">About Us</a></li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Your Cart", "Cart", "Home")</li>
+                        <li>@Html.ActionLink("Your Cart", "Index", "OrderDetail")</li>
                         <li>@Html.ActionLink("Login", "Login", "Account")</li>
                     </ul>
                 </div>
                 <div class="span4">
                     <h4>My Account</h4>
                     <ul class="nav">
-                        <li><a href="#">My Account</a></li>
+                        <li>@Html.ActionLink("My Account", "Index", "Manage")</li>
                         <li><a href="#">Order History</a></li>
                         <li><a href="#">Wish List</a></li>
                         <li><a href="#">Newsletter</a></li>

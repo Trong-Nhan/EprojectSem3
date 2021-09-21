@@ -1,0 +1,68 @@
+﻿@model OnlineOrdersConnection.Banner
+@{
+    ViewBag.Title = "TemporaryDelete";
+    Layout = "~/Areas/Admin/Views/Shared/MainLayoutAdmin.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Temporary Delete Banner</h3>
+                </div>
+                <div class="box-body">
+                    @using (Html.BeginForm("TemporaryDelete", "Banner", FormMethod.Post))
+                    {
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Image</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="image" name="Image" value="@Model.Image" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Id</label>
+                                    <input type="text" class="form-control" name="Id" value="@Model.Id" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Description</label>
+                                    <input type="text" class="form-control" name="Description" value="@Model.Description" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select name="Status" class="form-control">
+                                        @if (Model.Status == 1)
+                                        {
+                                            <option value="1" selected>Blocked</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="0" selected>Open</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <a href="@Url.Action("Index","Banner")" class="btn btn-default">Cancel</a>
+                            <button type="submit" class="btn btn-primary pull-right">Temporary Delete</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

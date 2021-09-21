@@ -1,8 +1,6 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/MainLayoutAdmin.cshtml";
-}
+﻿@model IEnumerable<OnlineOrdersConnection.Banner>
+@{ ViewBag.Title = "Index";
+                Layout = "~/Areas/Admin/Views/Shared/MainLayoutAdmin.cshtml"; }
 <section class="content">
     <div class="row">
         <div class="col-md-12">
@@ -10,7 +8,7 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-7">
-                            <h3 class="panel-title">Banner list</h3>
+                            <h3 class="panel-title">Banner List</h3>
                         </div>
                     </div>
                 </div>
@@ -20,30 +18,39 @@
                             <tr>
                                 <th>#</th>
                                 <th>Image</th>
-                                <th>Sort</th>
                                 <th>Description</th>
-                                <th>New added day</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                <tr>
-                    <td></td>
-                    <td>
-                        <img src="" width="90px" alt="">
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <form action="" method="POST" class="form-inline" role="form">
-                                <a href="">
-                                    <i class="btn btn-xs btn-danger fa fa-edit"></i>
-                                </a>
-                                <button type="submit" class="btn btn-xs btn-warning fa fa-trash"></button>
-                        </form>
-                    </td>
-                </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Id
+                                    </td>
+                                    <td>
+                                        <img src="~/Asset/themes/images/imgBanners/@item.Image" style="width:145px; height:50px;" alt="Alternate Text" />
+                                    </td>
+                                    <td>
+                                        @item.Description
+                                    </td>
+                                    <td>
+                                        @item.Status
+                                    </td>
+                                    <td>
+                                        <form action="" method="POST" class="form-inline" role="form">
+                                            <a href="@Url.Action("Edit","Banner",new { id = @item.Id})">
+                                                <i class="btn btn-xs btn-danger fa fa-edit"></i>
+                                            </a>
+                                            <a href="@Url.Action("TemporaryDelete","Banner",new { id = @item.Id})">
+                                                <i class="btn btn-xs btn-warning fa fa-trash"></i>
+                                            </a>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                     <div class="text-center">

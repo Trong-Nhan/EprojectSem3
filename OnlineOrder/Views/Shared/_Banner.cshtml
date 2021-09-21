@@ -1,0 +1,20 @@
+﻿@model IEnumerable<OnlineOrdersConnection.Banner>
+
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="~/Asset/themes/images/carousel/banner-1.jpg" alt="" />
+        </li>
+        <li>
+            @foreach (var item in Model)
+            {
+                <img alt="" src="~/Asset/themes/images/imgBanners/@item.Image">
+                <div class="intro">
+                    <h1>Mid season sale</h1>
+                    <p><span>@item.Description</span></p>
+                    <p><span>On selected items online and in stores</span></p>
+                </div>
+             }
+        </li>
+    </ul>
+</div>

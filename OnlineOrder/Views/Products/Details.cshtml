@@ -31,41 +31,43 @@
                 </div>
                 <div class="span5">
                     <address>
-                        <strong>Brand:</strong> <span>@Model.Frames</span><br>
-                        <strong>Product Code:</strong> <span>@Model.Id</span><br>
-                        <strong>Reward Points:</strong> <span>0</span><br>
-                        <strong>Availability:</strong> <span>Out Of Stock</span><br>
+                        <strong>Name:</strong> <span>@Model.Frames</span><br>
+                        <strong>Type Id:</strong> <span>@Model.FrameTypeId</span><br>
                     </address>
                     <h4><strong>Price: $@Model.Price</strong></h4>
                 </div>
                 <div class="span5">
-                    <form class="form-inline">
-                        <label class="checkbox">
-                            <input type="checkbox" value=""> Option one is this and that
-                        </label>
-                        <br />
-                        <label class="checkbox">
-                            <input type="checkbox" value=""> Be sure to include why it's great
-                        </label>
-                        <p>&nbsp;</p>
-                        @*@if (User.Identity.IsAuthenticated)
-                            {
-                                using (Html.BeginForm("Add", "Orders", FormMethod.Post))
-                                {
-                                    <input type="hidden" name="framesid" value="@Model.Id" />
-                                    <label>Qty:</label>
-                                    <input type="number" name="quantity" class="span1" placeholder="1" min="1" max="1000" required>
-                                    <button class="btn btn-inverse" type="submit">Add to cart</button>
-                                }
-                            }
-                            else
-                            {
-                                <span>Please login to continue</span>
-                            }*@
-                        <label>Qty:</label>
-                        <input type="number" name="quantity" class="span1" placeholder="1" min="1" max="1000" required>
-                        <button class="btn btn-inverse" type="submit">Add to cart</button>
-                    </form>
+                    @using (Html.BeginForm("Add", "OrderDetail", FormMethod.Post))
+                    {
+                        <input type="hidden" name="framesid" value="@Model.Id" />
+                        <input type="hidden" name="price" value="@Model.Price" />
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="form-group">
+                                <label for="">Quantity:</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="quantity" placeholder="1" min="1" max="1000" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Size Id:</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="sizeid" min="1" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Image:</label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="image" name="image" value="" required>
+                                </div>
+                            </div><br />
+                            <button class="btn btn-inverse" type="submit">Add to cart</button>
+                        }
+                        else
+                        {
+                            <span>Please login to continue</span>
+                        }
+                    }
                 </div>
             </div>
             <div class="row">

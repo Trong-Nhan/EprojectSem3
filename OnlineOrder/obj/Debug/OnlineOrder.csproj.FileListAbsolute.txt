@@ -271,8 +271,8 @@ D:\New folder\Project\OnlineOrder\bin\Microsoft.Owin.Security.Twitter.xml
 D:\New folder\Project\OnlineOrder\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\New folder\Project\OnlineOrder\bin\Microsoft.Owin.Security.OAuth.xml
 D:\New folder\Project\OnlineOrder\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\New folder\Project\OnlineOrder\obj\Debug\OnlineOrder.csprojAssemblyReference.cache
 D:\New folder\Project\OnlineOrder\obj\Debug\OnlineOrder.csproj.CoreCompileInputs.cache
 D:\New folder\Project\OnlineOrder\obj\Debug\OnlineOrder.csproj.CopyComplete
 D:\New folder\Project\OnlineOrder\obj\Debug\OnlineOrder.dll
 D:\New folder\Project\OnlineOrder\obj\Debug\OnlineOrder.pdb
+D:\New folder\Project\OnlineOrder\obj\Debug\OnlineOrder.csprojAssemblyReference.cache
