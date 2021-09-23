@@ -71,6 +71,11 @@ namespace OnlineOrder.Models.BUS
         {
             using (var db = new OnlineOrdersConnectionDB())
             {
+                List<OrderDetail> a = List(cusid).ToList();
+                if (a.Count() == 0)
+                {
+                    return 0;
+                }
                 return db.Query<float>("select sum(TotalPrice) from OrderDetail where CusId = '" + cusid + "'").FirstOrDefault();
             }
         }

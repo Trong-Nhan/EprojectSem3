@@ -196,6 +196,7 @@
     <Compile Include="Controllers\OrderDetailController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductTypesController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -206,6 +207,7 @@
     <Compile Include="Models\BUS\OrderDetailBUS.cs" />
     <Compile Include="Models\BUS\PaymentsBUS.cs" />
     <Compile Include="Models\BUS\ProductTypesBUS.cs" />
+    <Compile Include="Models\BUS\SearchBUS.cs" />
     <Compile Include="Models\BUS\ShippingBUS.cs" />
     <Compile Include="Models\BUS\SizeBUS.cs" />
     <Compile Include="Models\Generated\Database.cs">
@@ -5162,6 +5164,7 @@
     <Content Include="Views\Shared\_SubCategories.cshtml" />
     <Content Include="Views\Shared\_Banner.cshtml" />
     <Content Include="Views\OrderDetail\Index.cshtml" />
+    <Content Include="Views\Search\SearchResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

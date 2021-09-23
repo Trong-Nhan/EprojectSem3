@@ -29,8 +29,9 @@
     <div id="top-bar" class="container">
         <div class="row">
             <div class="span4">
-                <form method="POST" class="search_form">
-                    <input type="text" class="input-block-level search-query" Placeholder="Search Products & Designs">
+                <form method="POST" class="search_form" action="~/Search/SearchResult">
+                    <input type="hidden" value="" name="frametypeid" />
+                    <input type="text" class="input-block-level search-query" name="timkiem" placeholder="Search Products">
                 </form>
             </div>
             <div class="span8">
