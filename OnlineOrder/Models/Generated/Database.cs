@@ -541,6 +541,72 @@ namespace OnlineOrdersConnection
 
     
 
+	[TableName("dbo.Cart")]
+
+
+
+	[PrimaryKey("Id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class Cart : OnlineOrdersConnectionDB.Record<Cart>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public double? Price { get; set; }
+
+
+
+
+
+		[Column] public int? SizeId { get; set; }
+
+
+
+
+
+		[Column] public int? FramesId { get; set; }
+
+
+
+
+
+		[Column] public int? Quantity { get; set; }
+
+
+
+
+
+		[Column] public string Image { get; set; }
+
+
+
+
+
+		[Column] public double? TotalPrice { get; set; }
+
+
+
+
+
+		[Column] public string CusId { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.Config")]
 
 
@@ -853,12 +919,6 @@ namespace OnlineOrdersConnection
 
 
 
-
-
-		[Column] public string CusId { get; set; }
-
-
-
 	}
 
     
@@ -897,18 +957,6 @@ namespace OnlineOrdersConnection
 
 
 
-		[Column] public string OrderNote { get; set; }
-
-
-
-
-
-		[Column] public int TotalQuantity { get; set; }
-
-
-
-
-
 		[Column] public int? PaymentId { get; set; }
 
 
@@ -933,7 +981,7 @@ namespace OnlineOrdersConnection
 
 
 
-		[Column] public DateTime? UpdatedAt { get; set; }
+		[Column] public string UserId { get; set; }
 
 
 

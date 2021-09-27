@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OnlineOrdersConnection.OrderDetail>
+﻿@model IEnumerable<OnlineOrdersConnection.Cart>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -56,7 +56,7 @@
             </table>
             <hr />
             <p class="buttons center">
-                <button class="btn btn-inverse" type="submit" id="checkout">Checkout</button>
+                <a href="@Url.Action("Index","Checkout")" class="btn btn-inverse">Checkout</a>
             </p>
         </div>
         <div class="span3 col">

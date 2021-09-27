@@ -191,6 +191,7 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderDetailController.cs" />
@@ -203,6 +204,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BUS\BannersBUS.cs" />
     <Compile Include="Models\BUS\BlogBUS.cs" />
+    <Compile Include="Models\BUS\CheckoutBUS.cs" />
     <Compile Include="Models\BUS\OnlineOrdersBUS.cs" />
     <Compile Include="Models\BUS\OrderDetailBUS.cs" />
     <Compile Include="Models\BUS\PaymentsBUS.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Order.js" />
     <Content Include="Asset\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="Asset\bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="Asset\bootstrap\css\bootstrap.css" />
@@ -4709,7 +4712,6 @@
     <Content Include="Areas\Admin\Views\MainAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\MainAdmin\Login.cshtml" />
     <Content Include="Areas\Admin\Views\ManagePhoto\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Order\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Payments\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Payments\Index.cshtml" />
@@ -5165,6 +5167,7 @@
     <Content Include="Views\Shared\_Banner.cshtml" />
     <Content Include="Views\OrderDetail\Index.cshtml" />
     <Content Include="Views\Search\SearchResult.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

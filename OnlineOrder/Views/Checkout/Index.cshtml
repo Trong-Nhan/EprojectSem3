@@ -1,0 +1,49 @@
+﻿@model IEnumerable<OnlineOrdersConnection.Cart>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="header_text sub">
+    <img class="pageBanner" src="~/Asset/themes/images/pageBanner.png" alt="New products">
+    <h4><span>Check Out</span></h4>
+</section>
+<section class="main-content">
+    <div class="row">
+        <div class="span12">
+            <div class="accordion" id="accordion2">
+                <div class="accordion-inner">
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <h4>Your Personal Details</h4>
+                            <form method="post" action="~/Checkout/Add">
+                                <div class="control-group">
+                                    <label class="control-label">Customer Id</label>
+                                    <div class="controls">
+                                        <input type="number" placeholder="" class="input-xlarge" required name="cusid">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Payment Id</label>
+                                    <div class="controls">
+                                        <input type="number" placeholder="" class="input-xlarge" required name="paymentid">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Shipping Id</label>
+                                    <div class="controls">
+                                        <input type="number" placeholder="" class="input-xlarge" required name="shippingid">
+                                    </div>
+                                </div>
+                                <span name="totalprice"><strong>Total Price : $@ViewBag.TotalPrice</strong></span><br />
+                                <input type="submit" value="Confirm order" class="btn btn-inverse pull-right"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+</section>
+<title>MyImage | Checkout</title>
+

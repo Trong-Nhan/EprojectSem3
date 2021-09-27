@@ -12,7 +12,7 @@ namespace OnlineOrder.Models.BUS
         {
             using (var db = new OnlineOrdersConnectionDB())
             {
-                var x = db.Query<OrderDetail>("select * from OrderDetail where FramesId = '" + framesid + "' and CusId='" + cusid + "'and SizeId='" + sizeid + "'").ToList();
+                var x = db.Query<Cart>("select * from Cart where FramesId = '" + framesid + "' and CusId='" + cusid + "'and SizeId='" + sizeid + "'").ToList();
                 if (x.Count() > 0)
                 {
                     int a = (int)x.ElementAt(0).Quantity + quantity;
@@ -20,7 +20,7 @@ namespace OnlineOrder.Models.BUS
                 }
                 else
                 {
-                    OrderDetail orderdetail = new OrderDetail()
+                    Cart orderdetail = new Cart()
                     {
                         FramesId = framesid,
                         SizeId = sizeid,
@@ -38,7 +38,7 @@ namespace OnlineOrder.Models.BUS
         {
             using (var db = new OnlineOrdersConnectionDB())
             {
-                OrderDetail orderdetail = new OrderDetail()
+                Cart orderdetail = new Cart()
                 {
                     FramesId = framesid,
                     SizeId = sizeid,
@@ -48,22 +48,22 @@ namespace OnlineOrder.Models.BUS
                     TotalPrice = price * quantity,
                     CusId = cusid
                 };
-                var temp = db.Query<OrderDetail>("select Id from OrderDetail where FramesId = '" + framesid + "' and CusId='" + cusid + "'and SizeId='" + sizeid + "'").FirstOrDefault();
+                var temp = db.Query<Cart>("select Id from Cart where FramesId = '" + framesid + "' and CusId='" + cusid + "'and SizeId='" + sizeid + "'").FirstOrDefault();
                 db.Update(orderdetail, temp.Id);
             }
         }
-        public static IEnumerable<OrderDetail> List(string cusid)
+        public static IEnumerable<Cart> List(string cusid)
         {
             using (var db = new OnlineOrdersConnectionDB())
             {
-                return db.Query<OrderDetail>("select * from OrderDetail where CusId = '" + cusid + "'");
+                return db.Query<Cart>("select * from Cart where CusId = '" + cusid + "'");
             }
         }
         public static void Delete(int framesid, int sizeid, string cusid)
         {
             using (var db = new OnlineOrdersConnectionDB())
             {
-                var a = db.Query<OrderDetail>("select * from OrderDetail where FramesId = '" + framesid + "' and CusId='" + cusid + "'and SizeId='" + sizeid + "'").FirstOrDefault();
+                var a = db.Query<Cart>("select * from Cart where FramesId = '" + framesid + "' and CusId='" + cusid + "'and SizeId='" + sizeid + "'").FirstOrDefault();
                 db.Delete(a);
             }
         }
@@ -71,12 +71,12 @@ namespace OnlineOrder.Models.BUS
         {
             using (var db = new OnlineOrdersConnectionDB())
             {
-                List<OrderDetail> a = List(cusid).ToList();
+                List<Cart> a = List(cusid).ToList();
                 if (a.Count() == 0)
                 {
                     return 0;
                 }
-                return db.Query<float>("select sum(TotalPrice) from OrderDetail where CusId = '" + cusid + "'").FirstOrDefault();
+                return db.Query<float>("select sum(TotalPrice) from Cart where CusId = '" + cusid + "'").FirstOrDefault();
             }
         }
     }
